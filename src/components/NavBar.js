@@ -1,26 +1,19 @@
 import React from "react";
+import {contacts} from '../data'
 
 function NavBar(){
+    const people = contacts
+    const contact = people.map(
+        (contact) => <li className="contact" key={contact.id}>
+            <div className="icon">{contact.name[0]}</div>
+            {contact.name}
+        </li>
+    );
     return (
         <nav>
             <h2>Contacts</h2>
             <ul className="contacts">
-            <li className="contact">
-                <div className="icon">A</div>
-                Angela
-            </li>
-            <li className="contact active">
-                <div className="icon">P</div>
-                Pamela
-            </li>
-            <li className="contact">
-                <div className="icon">S</div>
-                Sandra
-            </li>
-            <li className="contact">
-                <div className="icon">R</div>
-                Rita
-            </li>
+                {contact}
             </ul>
         </nav>
     )
