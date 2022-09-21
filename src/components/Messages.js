@@ -5,7 +5,7 @@ function Messages(){
     const msgs = messages
     const msg = msgs.map(
         (message) => <li key={message.id} className={`message ${message.type}`}>
-            {/* <div className="icon">P</div> */}
+            <div className="icon">{message.name[0]}</div>
             <span className="content">{message.content}</span>
             </li>
         );
