@@ -4,8 +4,8 @@ import {messages} from '../data'
 function Messages(){
     const msgs = messages
     const msg = msgs.map(
-        (message) => <li key={message.id} className="message received">
-            {/* <div className="icon">P/E</div> */}
+        (message) => <li key={message.id} className={`message ${message.type}`}>
+            {/* <div className="icon">P</div> */}
             <span className="content">{message.content}</span>
             </li>
         );
